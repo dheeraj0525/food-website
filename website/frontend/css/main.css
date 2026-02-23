@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* FIX #8: Capital P to match Google Fonts */
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* ======================== CONTAINER ======================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px; /* FIX #7: Added horizontal padding so content doesn't touch edges */
+}
+
+/* ======================== NAVBAR ======================== */
+
+.navbar {
+    background: #222;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-weight: 600;
+}
+
+.logo span {
+    color: #ffb703;
+}
+
+/* FIX #3: nav-links was missing display:flex, list-style:none, and gap — nav was showing as vertical bullets */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #ffb703;
+}
+
+/* ======================== HERO ======================== */
+
+.hero {
+    height: 80vh;
+    background: url("../images/hero.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FIX #4: Added color:#fff and text-align:center — text was dark/invisible on dark overlay */
+.hero-content {
+    color: #fff;
+    text-align: center;
+}
+
+/* FIX #5: font-size was 18px — way too small for a hero heading */
+.hero-content h1 {
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* ======================== BUTTONS ======================== */
+
+/* FIX #1: .btn-primary was completely missing — used on every page but never defined */
+.btn-primary {
+    background: #ffb703;
+    color: #222;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: opacity 0.2s;
+}
+
+.btn-secondary {
+    background: #222;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    opacity: 0.85;
+}
+
+/* ======================== SECTION TITLE ======================== */
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* ======================== MENU PREVIEW / MENU PAGE ======================== */
+
+.menu-preview,
+.menu-page {
+    padding: 80px 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.menu-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.menu-card img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    margin-bottom: 8px;
+}
+
+.menu-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.menu-card span {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ffb703;
+}
+
+.menu-card button {
+    border: none;
+    cursor: pointer;
+}
+
+/* FIX #6: .center-btn was used in index.html but never defined */
+.center-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ======================== PROMOTIONS ======================== */
+
+.promotions {
+    background: #fff;
+    padding: 80px 0;
+}
+
+/* FIX #7: .promo-grid was missing gap — cards were jammed together */
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.promo-card {
+    background: #ffb703;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.promo-card h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+/* ======================== CTA ======================== */
+
+.cta {
+    background: #222;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* ======================== CART ======================== */
+
+.cart-page {
+    padding: 80px 0;
+}
+
+.cart-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.cart-summary {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.cart-summary h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* ======================== AUTH (LOGIN / REGISTER) ======================== */
+
+.auth-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.auth-box {
+    background: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px; /* Added for clean look */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-box form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.auth-box form input:focus {
+    border-color: #ffb703;
+}
+
+.auth-box button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 25px;
+}
+
+.auth-box p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-box p a {
+    color: #ffb703;
+    font-weight: 600;
+}
+
+/* ======================== FOOTER ======================== */
+
+.footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* ======================== RESPONSIVE ======================== */
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px; /* Scale down hero title on mobile */
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    /* Stack navbar on small screens */
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 26px;
+    }
+
+    .auth-box {
+        padding: 25px 20px;
+    }
+}
