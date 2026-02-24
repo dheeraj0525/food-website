@@ -1,6 +1,7 @@
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "1234",
+    "password": "Your_Password",
     "database": "food_app"
 }
+
