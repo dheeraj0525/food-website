@@ -9,14 +9,6 @@
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
 ---
-
-## 📸 Screenshots
-
-| Home Page | Menu Page | Cart |
-|-----------|-----------|------|
-| ![Home](screenshots/home page.png/home page1.png) | ![Menu](screenshots/menu page.png) | ![Cart](screenshots/cart page.png) |
-| ![login](screenshots/login page.png) | ![Register](screenshots/register page.png)
----
 ## 📸 Screenshots
 
 ### Home Page
@@ -24,6 +16,15 @@
 
 ### Menu Page  
 ![Menu Page](website/images/menu.png)
+
+### Cart Page
+![Cart](screenshots/cart page.png)
+
+### Login Page
+![login](screenshots/login page.png)
+
+### Register page
+![Register](screenshots/register page.png)
 
 ## ✨ Features
 
