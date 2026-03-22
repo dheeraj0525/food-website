@@ -151,12 +151,3 @@ BCA — Artificial Intelligence & Data Science
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-
-
-cart page.png
-home page.png
-home page1.png
-login page.png
-menu page.png
-register page.png
