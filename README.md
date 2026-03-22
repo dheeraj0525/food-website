@@ -14,8 +14,8 @@
 
 | Home Page | Menu Page | Cart |
 |-----------|-----------|------|
-| ![Home](screenshots/home.png) | ![Menu](screenshots/menu.png) | ![Cart](screenshots/cart.png) |
-
+| ![Home](screenshots/home page.png/home page1.png) | ![Menu](screenshots/menu page.png) | ![Cart](screenshots/cart page.png) |
+| ![login](screenshots/login page.png) | ![Register](screenshots/register page.png)
 ---
 
 ## ✨ Features
