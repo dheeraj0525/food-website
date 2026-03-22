@@ -1,128 +1,153 @@
-# food-website
-A full-stack food ordering website built with HTML, CSS, and JavaScript for the frontend, Flask (Python) for the backend, and MySQL for database management.
+# 🍽️ Food website — Full-Stack Food Ordering Web App
 
-🍽️ Food Ordering Website
+> A full-stack food ordering web application where users can register, log in, browse a menu, add items to a cart, and place orders — built with Flask, MySQL, and vanilla JavaScript.
 
-A full-stack food ordering web application built using HTML, CSS, and JavaScript for the frontend, Flask (Python) for the backend, and MySQL for database management.
-This project demonstrates frontend UI design, backend API development, and database integration.
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat-square&logo=python)
+![Flask](https://img.shields.io/badge/Flask-2.x-black?style=flat-square&logo=flask)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?style=flat-square&logo=mysql)
+![HTML CSS JS](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JS-yellow?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
-🚀 Features
+---
 
-User registration and login
+## 📸 Screenshots
 
-Browse food menu
+| Home Page | Menu Page | Cart |
+|-----------|-----------|------|
+| ![Home](screenshots/home.png) | ![Menu](screenshots/menu.png) | ![Cart](screenshots/cart.png) |
 
-Add items to cart
+---
 
-Place orders
+## ✨ Features
 
-Responsive UI design
+- 🔐 User registration and login with session management
+- 🍕 Browse food menu with item categories
+- 🛒 Add and remove items from cart
+- 📦 Place and confirm orders
+- 📱 Fully responsive UI across all screen sizes
+- 🔌 REST API backend built with Flask
+- 🗄️ Persistent data storage with MySQL
 
-Backend API using Flask
+---
 
-Data storage using MySQL
+## 🛠️ Tech Stack
 
-🛠️ Tech Stack
-Frontend
+| Layer | Technology |
+|-------|------------|
+| Frontend | HTML5, CSS3, JavaScript (ES6) |
+| Backend | Python, Flask |
+| Database | MySQL |
+| Auth | Flask Session Management |
+| Deployment | Render *(in progress)* |
 
-HTML
+---
 
-CSS
-
-JavaScript
-
-Backend
-
-Flask (Python)
-
-Database
-
-MySQL
-
-📂 Project Structure
+## 📂 Project Structure
+```
 food-website/
 │
-├── frontend/
-│   ├── index.html
-│   ├── css/
-│   ├── js/
-│   └── images/
+├── website/
+│   ├── backend/
+│   │   ├── app.py           # Flask app entry point
+│   │   ├── routes/          # Route handlers
+│   │   ├── models/          # Database models
+│   │   └── config.py        # App configuration
+│   │
+│   ├── frontend/
+│   │   ├── index.html       # Main HTML entry
+│   │   ├── css/             # Stylesheets
+│   │   ├── js/              # Client-side logic
+│   │   └── images/          # Static assets
+│   │
+│   └── database/
+│       └── schema.sql       # MySQL table definitions
 │
-├── backend/
-│   ├── app.py
-│   ├── routes/
-│   ├── models/
-│   ├── config.py
-│   └── requirements.txt
-│
-├── database/
-│   └── schema.sql
-│
-├── README.md
-└── .gitignore
-⚙️ Installation & Setup
-1️⃣ Clone the repository
-git clone https://github.com/dheerajaryan/food-website.git
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+---
+
+## ⚙️ Local Setup
+
+### Prerequisites
+
+- Python 3.9+
+- MySQL 8.0+
+- pip
+
+### Steps
+```bash
+# 1. Clone the repository
+git clone https://github.com/dheeraj0525/food-website.git
 cd food-website
-2️⃣ Backend Setup
-cd backend
+
+# 2. Create and activate virtual environment
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+source venv/bin/activate        # Windows: venv\Scripts\activate
+
+# 3. Install dependencies
 pip install -r requirements.txt
-3️⃣ Database Setup
 
-Create a MySQL database
+# 4. Set up the database
+# Create a MySQL database named foodhub
+mysql -u root -p < website/database/schema.sql
 
-Import schema.sql
+# 5. Configure database credentials
+# Edit website/backend/config.py and update:
+# DB_HOST, DB_USER, DB_PASSWORD, DB_NAME
 
-Update database credentials in config.py
+# 6. Run the Flask development server
+python website/backend/app.py
+```
 
-4️⃣ Run the Flask Server
-python app.py
-▶️ How to Run the Project
+Open `http://127.0.0.1:5000` in your browser.
 
-Start the Flask backend
+---
 
-Open frontend/index.html in your browser
+## 🗄️ Database Schema
 
-Ensure backend and database are running
+| Table | Purpose |
+|-------|---------|
+| `users` | Stores registered user accounts |
+| `menu_items` | Food items with name, price, category |
+| `cart` | User cart sessions and selected items |
+| `orders` | Confirmed order records |
 
-📸 Screenshots (Optional but Recommended)
+---
 
-Add screenshots of homepage, menu page, and login page here.
+## 🔄 How It Works
+```
+User registers / logs in
+        ↓
+Browses menu → adds items to cart
+        ↓
+Flask API handles all requests
+        ↓
+MySQL stores users, cart, orders
+        ↓
+Order confirmed and saved to DB
+```
 
-📌 Project Status
+---
 
-Frontend: ✅ Completed
+## 🚧 Planned Improvements
 
-Backend: ✅ Functional
+- [ ] JWT-based authentication
+- [ ] Payment gateway integration (Razorpay)
+- [ ] Admin dashboard for order management
+- [ ] Order status tracking
+- [ ] Deploy on Render
 
-Database: ✅ Integrated
+---
 
-Deployment: 🚧 Not deployed yet
+## 👤 Author
 
-🎯 Future Improvements
+**Dheeraj Aryan**  
+BCA — Artificial Intelligence & Data Science  
 
-Payment gateway integration
+[![GitHub](https://img.shields.io/badge/GitHub-dheeraj0525-black?style=flat-square&logo=github)](https://github.com/dheeraj0525)
+## 📄 License
 
-Admin dashboard
-
-Order tracking
-
-Authentication using JWT
-
-Deployment on cloud (Render / AWS)
-
-👨‍💻 Author
-
-Dheeraj Aryan
-
-⭐ Why This README Works
-
-Looks industry-level
-
-Easy to understand
-
-Shows full-stack knowledge
-
-Recruiter-friendly
+This project is open source and available under the [MIT License](LICENSE).
