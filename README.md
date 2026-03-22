@@ -12,19 +12,19 @@
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](website/images/home.png)
+![Home Page](website/images/home_page.png)
 
 ### Menu Page  
-![Menu Page](website/images/menu.png)
+![Menu Page](website/images/menu_page.png)
 
 ### Cart Page
-![Cart](screenshots/cart page.png)
+![Cart Page](screenshots/cart_page.png)
 
 ### Login Page
-![login](screenshots/login page.png)
+![login Page](screenshots/login_page.png)
 
 ### Register page
-![Register](screenshots/register page.png)
+![Register Page](screenshots/register_page.png)
 
 ## ✨ Features
 
