@@ -17,6 +17,13 @@
 | ![Home](screenshots/home page.png/home page1.png) | ![Menu](screenshots/menu page.png) | ![Cart](screenshots/cart page.png) |
 | ![login](screenshots/login page.png) | ![Register](screenshots/register page.png)
 ---
+## 📸 Screenshots
+
+### Home Page
+![Home Page](website/images/home.png)
+
+### Menu Page  
+![Menu Page](website/images/menu.png)
 
 ## ✨ Features
 
