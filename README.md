@@ -12,8 +12,7 @@
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page]([website/images/home.png](https://github.com/dheeraj0525/food-website/blob/main/website/images%20of%20website/cart%20page.png))
-
+![Home Page](website/images/home.png)
 ### Menu Page  
 ![Menu Page](website/images/menu.png)
 
